@@ -1,4 +1,6 @@
-﻿$Devices=Get-Content .\Computers.txt
+Install-Module AzureAD
+Connect-AzureAD
+$Devices=Get-Content .\Computers.txt
 $OutputList = @()
 $Obj = @()
 

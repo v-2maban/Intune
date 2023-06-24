@@ -7,5 +7,3 @@ $Filepath="c:\GPOExport\"+"$Filename"+".xml"
 Get-GPOReport -ReportType Xml -Guid $GPOName.Id -Path $Filepath
 Write-Host "Saving Group POlicy: $filename" -ForegroundColor Green
 }
-
-

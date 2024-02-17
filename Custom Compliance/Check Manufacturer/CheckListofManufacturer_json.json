@@ -1,0 +1,20 @@
+{
+"Rules":[ 
+   
+    { 
+       "SettingName":"Manufacturer",
+       "Operator":"IsEquals",
+       "DataType":"String",
+       "Operand":"Supported",
+       "MoreInfoUrl":"https://mbintune.cloud",
+       "RemediationStrings":[ 
+          {
+             "Language": "en_US",
+             "Title": "We only  support specific manufacturers",
+             "Description": "Unsupported Manufacturer will be marked as non-compliant"
+          }
+       ]
+   
+    }
+ ]
+}

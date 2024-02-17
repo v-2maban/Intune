@@ -1,0 +1,32 @@
+{
+  "Rules": [
+    {
+      "SettingName": "ChromeInstalled",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": true,
+      "MoreInfoUrl": "https://manishbangia.com",
+      "RemediationStrings": [
+        {
+          "Language": "en_US",
+          "Title": "Chrome is not installed",
+          "Description": "Make sure chrome is installed"
+        }
+      ]
+    },
+    {
+      "SettingName": "ApprovedChromeVersion",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": true,
+      "MoreInfoUrl": "https://manishbangia.com",
+      "RemediationStrings": [
+        {
+          "Language": "en_US",
+          "Title": "This is not the approved Chrome version",
+          "Description": "Upgrade to the latest Chrome version"
+        }
+      ]
+    }
+  ]
+}

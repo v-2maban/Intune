@@ -1,0 +1,20 @@
+{
+"Rules":[ 
+   
+    { 
+       "SettingName":"SerialNumberSupport",
+       "Operator":"IsEquals",
+       "DataType":"String",
+       "Operand":"Supported",
+       "MoreInfoUrl":"https://manishbangia.com",
+       "RemediationStrings":[ 
+          {
+             "Language": "en_US",
+             "Title": "The Serial Number of device is not a Corporate device",
+             "Description": "Unsupported SerialNo, this is not a Corporate Device and will be marked as non-compliant"
+          }
+       ]
+   
+    }
+ ]
+}

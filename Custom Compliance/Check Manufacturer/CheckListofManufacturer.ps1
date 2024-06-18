@@ -1,4 +1,10 @@
-﻿$SupportedManufacturers="Lenovo","Microsoft Corporation","Dell Inc."
+<#
+Version: 1.0
+Author: Manish Bangia (manishbangia.com) 
+#>
+ $SupportedManufacturers="Lenovo",
+ "Microsoft Corporation",
+ "Dell Inc."
 $WMI_ComputerSystem = Get-WMIObject -class Win32_ComputerSystem
 $Manufacturer = $WMI_ComputerSystem.Manufacturer
 

@@ -1,6 +1,10 @@
-
-#Path to Save
+#Create c:\temp folder if doesn't exists
 $path = "c:\temp"
+If(!(Test-Path -PathType container $path))
+{
+    New-Item -ItemType Directory -Path $path
+}
+
 
 #Get Model and Manufacturer
 $ComputerSystemInfo = Get-WmiObject Win32_ComputerSystem

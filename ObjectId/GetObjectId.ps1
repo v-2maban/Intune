@@ -14,6 +14,6 @@ foreach ($Device in $Devices) {
 
 $OutputList | Out-File .\DevicewithObjectid.csv
 $OutputList | Select -ExpandProperty ObjectId | Out-File .\DevicewithObjectidonly.csv
-$OutputListAll = Get-AzureADDevice -All $true | Select DisplayName, ObjectId,  DeviceTrustType
-$OutputListAll | Out-File .\AllDeviceswithObjectid.csv
+#$OutputListAll = Get-AzureADDevice -All $true | Select DisplayName, ObjectId,  DeviceTrustType
+#$OutputListAll | Out-File .\AllDeviceswithObjectid.csv
 $Objtemplate | Out-File .\CsvTemplateToUpload.csv

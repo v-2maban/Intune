@@ -1,3 +1,6 @@
+To rename the computer, remove the commented lines from RenameComputerNamePerModel.ps1:
+Rename-Computer
+Shutdown
 -------------
 To create Win32 app, run the command (replace the source,output location path):
 

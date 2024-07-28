@@ -1,7 +1,6 @@
 ﻿$ManufacturerValue = (Get-WmiObject Win32_ComputerSystem).Manufacturer
 $ModelValue = (Get-WmiObject Win32_ComputerSystem).Model
 
-Write-Host "This is a Dell Device" -ForegroundColor Green
 $Serialnumber = (get-wmiobject -class win32_bios).serialnumber
 $SerialnumberNoHyphen = $serialnumber.Replace("-","")
 

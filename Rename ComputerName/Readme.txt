@@ -1,6 +1,8 @@
-To rename the computer, remove the commented lines from RenameComputerNamePerModel.ps1:
-Rename-Computer
-Shutdown
+To Rename the computername based upon specific Model, we can use use RenameComputerName.ps1 in the form of Win32 App.
+
+RenameComputerName.ps1 is used for renaming the Computername name, while DetectComputerName.ps1 is used for detection of ComputerName.
+
+Only RenameComputerName.ps1 is required as source.
 -------------
 To create Win32 app, run the command (replace the source,output location path):
 

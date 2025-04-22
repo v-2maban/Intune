@@ -7,8 +7,6 @@ Description: Create the folder if missing
 #>
 
 $RemediationName="Rem: Create Folder"
-
-$RemediationName="Rem: Create Folder"
 $FolderPath="C:\TestFolder"
 
 Try {

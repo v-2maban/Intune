@@ -1,0 +1,20 @@
+{
+"Rules":[ 
+   
+    { 
+       "SettingName":"ModelSupport",
+       "Operator":"IsEquals",
+       "DataType":"String",
+       "Operand":"Supported",
+       "MoreInfoUrl":"https://manishbangia.com",
+       "RemediationStrings":[ 
+          {
+             "Language": "en_US",
+             "Title": "This is not a supported model",
+             "Description": "Unsupported Model will be marked as non-compliant"
+          }
+       ]
+   
+    }
+ ]
+}

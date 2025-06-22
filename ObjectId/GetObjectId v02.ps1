@@ -1,4 +1,13 @@
-﻿#Install-Module Entra
+<#
+Version: 1.0
+Author: 
+- Manish Bangia (manishbangia.com)
+Script: GetObjectId v02.ps1
+Description: Script to upload bulk members to Entra ID group.
+Version 2 utilises Microsoft.Entra group replacing AzureAD group
+#>
+
+
 
 If (get-installedmodule Microsoft.Entra) 
 {Write-Host "Entra Module already installed" -ForegroundColor Cyan }

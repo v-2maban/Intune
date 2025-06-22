@@ -1,5 +1,20 @@
+<#
+Version: 2.0
+Author: 
+- Manish Bangia (manishbangia.com)
+Script: GetObjectId.ps1
+Description: Script to upload bulk members to Azure AD group
+#>
+
+If (get-installedmodule AzureAD -ErrorAction SilentlyContinue) 
+{Write-Host "Azure AD Module already installed" -ForegroundColor Cyan }
+
+Else {
 Install-Module AzureAD
+}
+
 Connect-AzureAD
+
 $Devices=Get-Content .\Computers.txt
 $OutputList = @()
 $Obj = @()

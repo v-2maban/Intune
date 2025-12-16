@@ -1,4 +1,4 @@
-﻿$ManufacturerValue = (Get-WmiObject Win32_ComputerSystem).Manufacturer
+$ManufacturerValue = (Get-WmiObject Win32_ComputerSystem).Manufacturer
 $ModelValue = (Get-WmiObject Win32_ComputerSystem).Model
 $Serialnumber = (Get-WmiObject -Class win32_bios).serialnumber
 $SerialnumberNoHyphen = $Serialnumber.Replace("-","")
@@ -17,6 +17,12 @@ $NewHostName = "AUSP"+"$LastCharSerialNumber"
 ## For Dell Precision and Dell Latitude Models ##
 "Precision|Latitude" {
 $NewHostName = "AULPDL"+"$Serialnumber"
+}
+
+## For HP ZBook Models ##
+"ZBook" {
+Write-Output "This is a $ModelValue Device"
+$NewHostName = "AULTH"+"$Serialnumber"
 }
 
 ## For Microsoft Virtual Machine ##

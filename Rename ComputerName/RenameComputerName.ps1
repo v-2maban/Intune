@@ -1,3 +1,22 @@
+## Create Function: RenameComputer
+Function RenameComputer {
+If ($OGHostname -eq $NewHostName) {
+Write-Output "No need to rename $NewHostName"
+                                  }
+
+Else {
+Write-Output "Rename required from $OGHostname to $NewHostName"
+Rename-Computer -NewName $NewHostName -Force
+Start-Sleep -Seconds 60
+     }
+
+}
+
+#-----------------------------------
+#---------Main Script---------------
+#-----------------------------------
+
+
 $ManufacturerValue = (Get-WmiObject Win32_ComputerSystem).Manufacturer
 $ModelValue = (Get-WmiObject Win32_ComputerSystem).Model
 $Serialnumber = (Get-WmiObject -Class win32_bios).serialnumber
@@ -37,7 +56,7 @@ $NewHostName = "AUVM"+"$FirstCharSerialnumber"
 
                             }
 
-#Rename ComputerName
+#Verify Model Value, if exists, run function RenameComputer
 If($NewHostName -ne $Null) {
 Write-Output "Model value is not Null"
 
@@ -47,18 +66,4 @@ RenameComputer
 
 Else {
 Write-Output "No validation for ComputerName"
-}
-
-
-Function RenameComputer {
-If ($OGHostname -eq $NewHostName) {
-Write-Output "No need to rename $NewHostName"
-                                  }
-
-Else {
-Write-Output "Rename required from $OGHostname to $NewHostName"
-Rename-Computer -NewName $NewHostName -Force
-Start-Sleep -Seconds 60
-     }
-
 }
